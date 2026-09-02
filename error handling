@@ -1,0 +1,33 @@
+class AgeError extends Error {
+    constructor(message) {
+        super(message);
+    }
+}
+
+try {
+    let age = 15;
+
+    if (age < 18) {
+        throw new AgeError("You must be 18 or older.");
+    }
+
+    console.log("You are eligible.");
+}
+catch (error) {
+    console.log("Error:", error.message);
+}
+
+try {
+    let num = 0;
+
+    if (num === 0) {
+        throw new Error("Number cannot be zero.");
+    }
+
+    console.log("Valid number.");
+}
+catch (error) {
+    console.log("Error:", error.message);
+}
+
+console.log("Program finished successfully.");
