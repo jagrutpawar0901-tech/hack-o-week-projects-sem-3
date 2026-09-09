@@ -1,0 +1,68 @@
+const PI = 3.14159;
+let c = 0;
+c += 1;
+
+const add = (a, b) => a + b;
+const gr = n => `Hello, ${n}!`;
+const mul = (x, y) => {
+  const r = x * y;
+  return r;
+};
+
+const u = "Alex";
+const a = 28;
+const m = `Name: ${u}, Age: ${a}, Next year: ${a + 1}`;
+
+const p = { n: "Sam", ag: 30, ci: "Berlin" };
+const { n, ci } = p;
+const { ag: pa } = p;
+
+const cols = ["red", "green", "blue"];
+const [f, s, ...rc] = cols;
+
+const ns = [1, 2, 3];
+const mns = [...ns, 4, 5];
+const pc = { ...p, co: "Germany" };
+
+const sa = (...nums) => nums.reduce((acc, n) => acc + n, 0);
+
+const prs = [
+  { id: 1, n: "Laptop",  pr: 999,  is: true  },
+  { id: 2, n: "Phone",   pr: 699,  is: false },
+  { id: 3, n: "Tablet",  pr: 399,  is: true  },
+  { id: 4, n: "Monitor", pr: 249,  is: true  },
+];
+
+const nms = prs.map(p => p.n);
+const av = prs.filter(p => p.is);
+const tv = prs.reduce((s, p) => s + p.pr, 0);
+const exp = prs.find(p => p.pr > 500);
+const hos = prs.some(p => !p.is);
+const ac = prs.every(p => p.pr < 1000);
+
+const mm = {
+  add: (a, b) => a + b,
+  PI: 3.14159,
+  mul: (a, b) => a * b,
+};
+
+console.log(c);
+console.log(PI);
+console.log(add(5, 3));
+console.log(gr("World"));
+console.log(mul(4, 7));
+console.log(m);
+console.log(n, ci);
+console.log(pa);
+console.log(f, s, rc);
+console.log(mns);
+console.log(pc);
+console.log(sa(1, 2, 3, 4));
+console.log(nms);
+console.log(av);
+console.log(tv);
+console.log(exp);
+console.log(hos);
+console.log(ac);
+console.log(mm.add(10, 20));
+console.log(mm.PI);
